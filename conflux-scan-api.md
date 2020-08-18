@@ -81,14 +81,18 @@ http://scan-dev-service.conflux-chain.org:8885/api/contract/query?address=0x8701
 
 注: 0x87010faf5964d67ed070bc4b8dcafa1e1adc0997 为 Oceanus 网络的 FansCoin
 
-* 查看代币(address)转移 
+* 查看指定代币(address)转移 
 
 http://scan-dev-service.conflux-chain.org:8885/api/transfer/list?pageSize=10&page=1&address=0x87010faf5964d67ed070bc4b8dcafa1e1adc0997
 
-* 查看用户代币(address)转移
+* 查看用户(accountAddress)代币转移
+
+http://scan-dev-service.conflux-chain.org:8885/api/transfer/list?pageSize=10&page=1&accountAddress=0x1eff4db4696253106ae18ca96e092a0f354ef7c8
+
+* 查看用户(accountAddress)的指定代币(address)转移
 
 http://scan-dev-service.conflux-chain.org:8885/api/transfer/list?pageSize=10&page=1&address=0x87010faf5964d67ed070bc4b8dcafa1e1adc0997&accountAddress=0x1eff4db4696253106ae18ca96e092a0f354ef7c8
 
-* 查看用户指定纪元区间(minEpochNumber, maxEpochNumber)内代币(address)转移
+* 查看用户(accountAddress)指定纪元区间(minEpochNumber, maxEpochNumber)内指定代币(address)转移
 
 http://scan-dev-service.conflux-chain.org:8885/api/transfer/list?pageSize=10&page=1&address=0x87010faf5964d67ed070bc4b8dcafa1e1adc0997&accountAddress=0x1eff4db4696253106ae18ca96e092a0f354ef7c8&minEpochNumber=121627&maxEpochNumber=121627
