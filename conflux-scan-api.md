@@ -21,61 +21,61 @@
 
 * 查看用户(address)信息
 
-http://scan-dev-service.conflux-chain.org:8885/api/address/query?address=0x176c45928d7c26b0175dec8bf6051108563c62c5
+http://scan-dev-service.conflux-chain.org:8885/v1/account/0x176c45928d7c26b0175dec8bf6051108563c62c5
 
 ## block
 
 * 查看所有区块列表 (无翻页限制)
 
-http://scan-dev-service.conflux-chain.org:8885/api/block/list?pageSize=10&page=1
+http://scan-dev-service.conflux-chain.org:8885/v1/block?skip=0&limit=2
 
 * 查看指定纪元区间(minEpochNumber, maxEpochNumber)内区块列表
 
-http://scan-dev-service.conflux-chain.org:8885/api/block/list?pageSize=10&page=1&minEpochNumber=0&maxEpochNumber=1
+http://scan-dev-service.conflux-chain.org:8885/v1/block?skip=0&limit=2&minEpochNumber=0&maxEpochNumber=1
 
 * 查看矿工(miner)挖去区块列表
 
-http://scan-dev-service.conflux-chain.org:8885/api/block/list?pageSize=10&page=1&miner=0x128986afd2fbb689c072e09150b5bc6c1b22c7a3
+http://scan-dev-service.conflux-chain.org:8885/v1/block?skip=0&limit=2&miner=0x128986afd2fbb689c072e09150b5bc6c1b22c7a3
 
 ## transaction
 
 * 查看所有交易列表 (无翻页限制)
 
-http://scan-dev-service.conflux-chain.org:8885/api/transaction/list?pageSize=10&page=1
+http://scan-dev-service.conflux-chain.org:8885/v1/transaction?skip=0&limit=2
 
 * 查看区块(blockHash)中的交易 (无翻页)
 
-http://scan-dev-service.conflux-chain.org:8885/api/transaction/list?blockHash=0x428eb34cb1a4e56a626a30c11c046362f94e70cebc513f25742ed4442b6a6104
+http://scan-dev-service.conflux-chain.org:8885/v1/transaction?blockHash=0x428eb34cb1a4e56a626a30c11c046362f94e70cebc513f25742ed4442b6a6104
 
 * 查看指定纪元区间(minEpochNumber, maxEpochNumber)内交易
 
-http://scan-dev-service.conflux-chain.org:8885/api/transaction/list?pageSize=10&page=1&minEpochNumber=2119608&maxEpochNumber=2119608
+http://scan-dev-service.conflux-chain.org:8885/v1/transaction?skip=0&limit=2&minEpochNumber=2119608&maxEpochNumber=2119608
 
 * 查看用户或合约(accountAddress)交易
 
-http://scan-dev-service.conflux-chain.org:8885/api/transaction/list?pageSize=10&page=1&accountAddress=0x176c45928d7c26b0175dec8bf6051108563c62c5
+http://scan-dev-service.conflux-chain.org:8885/v1/transaction?skip=0&limit=2&accountAddress=0x176c45928d7c26b0175dec8bf6051108563c62c5
 
 * 查看用户或合约(accountAddress)指定纪元区间(minEpochNumber, maxEpochNumber)内交易
 
-http://scan-dev-service.conflux-chain.org:8885/api/transaction/list?pageSize=10&page=1&accountAddress=0x176c45928d7c26b0175dec8bf6051108563c62c5&minEpochNumber=2119608&maxEpochNumber=2119608
+http://scan-dev-service.conflux-chain.org:8885/v1/transaction?skip=0&limit=2&accountAddress=0x176c45928d7c26b0175dec8bf6051108563c62c5&minEpochNumber=2119608&maxEpochNumber=2119608
 
 * 查看用户或合约(accountAddress)发送交易
 
-http://scan-dev-service.conflux-chain.org:8885/api/transaction/list?pageSize=10&page=1&accountAddress=0x176c45928d7c26b0175dec8bf6051108563c62c5&txType=outgoing
+http://scan-dev-service.conflux-chain.org:8885/v1/transaction?skip=0&limit=2&accountAddress=0x176c45928d7c26b0175dec8bf6051108563c62c5&txType=outgoing
 
 * 查看用户或合约(accountAddress)接收交易
 
-http://scan-dev-service.conflux-chain.org:8885/api/transaction/list?pageSize=10&page=1&accountAddress=0x176c45928d7c26b0175dec8bf6051108563c62c5&txType=incoming
+http://scan-dev-service.conflux-chain.org:8885/v1/transaction?skip=0&limit=2&accountAddress=0x176c45928d7c26b0175dec8bf6051108563c62c5&txType=incoming
 
 * 查看用户或合约(accountAddress)失败交易
 
-http://scan-dev-service.conflux-chain.org:8885/api/transaction/list?pageSize=10&page=1&accountAddress=0x176c45928d7c26b0175dec8bf6051108563c62c5&status=1
+http://scan-dev-service.conflux-chain.org:8885/v1/transaction?skip=0&limit=2&accountAddress=0x176c45928d7c26b0175dec8bf6051108563c62c5&status=1
 
 ## contract
 
 * 查看合约(address)详情
 
-http://scan-dev-service.conflux-chain.org:8885/api/contract/query?address=0x87010faf5964d67ed070bc4b8dcafa1e1adc0997&fields=name,abi,sourceCode
+http://scan-dev-service.conflux-chain.org:8885/v1/contract/0x87010faf5964d67ed070bc4b8dcafa1e1adc0997?fields=name,abi,sourceCode
 
 ## transfer 
 
@@ -83,16 +83,16 @@ http://scan-dev-service.conflux-chain.org:8885/api/contract/query?address=0x8701
 
 * 查看指定代币(address)转移 
 
-http://scan-dev-service.conflux-chain.org:8885/api/transfer/list?pageSize=10&page=1&address=0x87010faf5964d67ed070bc4b8dcafa1e1adc0997
+http://scan-dev-service.conflux-chain.org:8885/v1/transfer?skip=0&limit=2&address=0x87010faf5964d67ed070bc4b8dcafa1e1adc0997
 
 * 查看用户(accountAddress)代币转移
 
-http://scan-dev-service.conflux-chain.org:8885/api/transfer/list?pageSize=10&page=1&accountAddress=0x1eff4db4696253106ae18ca96e092a0f354ef7c8
+http://scan-dev-service.conflux-chain.org:8885/v1/transfer?skip=0&limit=2&accountAddress=0x1eff4db4696253106ae18ca96e092a0f354ef7c8
 
 * 查看用户(accountAddress)的指定代币(address)转移
 
-http://scan-dev-service.conflux-chain.org:8885/api/transfer/list?pageSize=10&page=1&address=0x87010faf5964d67ed070bc4b8dcafa1e1adc0997&accountAddress=0x1eff4db4696253106ae18ca96e092a0f354ef7c8
+http://scan-dev-service.conflux-chain.org:8885/v1/transfer?skip=0&limit=2&address=0x87010faf5964d67ed070bc4b8dcafa1e1adc0997&accountAddress=0x1eff4db4696253106ae18ca96e092a0f354ef7c8
 
 * 查看用户(accountAddress)指定纪元区间(minEpochNumber, maxEpochNumber)内指定代币(address)转移
 
-http://scan-dev-service.conflux-chain.org:8885/api/transfer/list?pageSize=10&page=1&address=0x87010faf5964d67ed070bc4b8dcafa1e1adc0997&accountAddress=0x1eff4db4696253106ae18ca96e092a0f354ef7c8&minEpochNumber=121627&maxEpochNumber=121627
+http://scan-dev-service.conflux-chain.org:8885/v1/transfer?skip=0&limit=2&address=0x87010faf5964d67ed070bc4b8dcafa1e1adc0997&accountAddress=0x1eff4db4696253106ae18ca96e092a0f354ef7c8&minEpochNumber=121627&maxEpochNumber=121627
